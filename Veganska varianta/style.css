@@ -37,4 +37,112 @@ body {
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+body {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+}
 
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.name {
+    font-family: 'Raleway';
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 2px 2px 10px black;
+    max-width: 70vw;
+}
+
+.recipe {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px white solid;
+}
+
+
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url("images/salat.jpg");
+    min-height: 200px;
+}
+
+.small {
+    min-height: 90px;
+}
+
+.two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(images/chlebicek.jpg);
+}
+
+.three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(images/tacos.jpg);
+}
+
+.four {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(images/cizrna.jpg);
+}
+
+.five {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(images/burger.jpg);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 650px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .recipe {
+        padding: 20px;
+    }
+
+    .main {
+        flex-basis: 100%;
+        min-height: 250px;
+    }
+
+    .small {
+        flex-basis: 50%;
+        min-height: 150px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .three,
+    .five {
+        border-left: 1px white solid;
+    }
+}
+
+@media (min-width: 1000px) {
+    
+}
