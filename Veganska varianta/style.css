@@ -41,9 +41,12 @@ body {
     color: white;
     font-weight: 400;
     font-size: 14px;
+    background-color: rgb(26, 26, 26);
+}
+
+.page {
     display: flex;
     flex-direction: column;
-    background-color: rgb(26, 26, 26);
 }
 
 h1 {
@@ -80,6 +83,16 @@ h2 {
     min-height: 200px;
 }
 
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.smalls {
+    display: flex;
+    flex-direction: column;
+}
+
 .small {
     min-height: 90px;
 }
@@ -102,15 +115,11 @@ h2 {
 .five {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(images/burger.jpg);
-}
-
-.info {
-    display: flex;
-    justify-content: space-between;
+    border-bottom: none;
 }
 
 @media (min-width: 650px) {
-    body {
+    .page {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -122,6 +131,11 @@ h2 {
     .main {
         flex-basis: 100%;
         min-height: 250px;
+    }
+
+    .smalls {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .small {
@@ -141,8 +155,46 @@ h2 {
     .five {
         border-left: 1px white solid;
     }
+
+    .four {
+        border-bottom: none;
+    }
 }
 
 @media (min-width: 1000px) {
-    
+    .page {
+        flex-wrap: nowrap;
+    }
+
+    .name {
+        max-width: 20vw;
+    }
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .main {
+        min-height: 400px;
+        flex-basis: calc(100% / 3);
+    }
+
+    .smalls {
+        border-left: white 1px solid;
+        flex-basis: calc(100% / 3 * 2);
+    }
+
+    .small {
+        min-height: 200px;
+        flex-basis: calc(100% / 2);
+    }
+
+    .main,
+    .four,
+    .five {
+        border-bottom: none;
+    }
 }
